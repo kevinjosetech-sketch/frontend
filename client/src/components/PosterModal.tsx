@@ -32,8 +32,8 @@ export default function PosterModal({ movieData, onClose }: PosterModalProps) {
           <div className="w-full h-full bg-black rounded-lg overflow-hidden">
             <img 
               src={highResPosterUrl}
-              alt={`${movieData.Title} poster`}
-              className="w-full h-full object-cover"
+              alt={`${movieData.Title} high resolution poster`}
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
