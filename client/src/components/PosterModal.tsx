@@ -14,7 +14,7 @@ export default function PosterModal({ movieData, onClose }: PosterModalProps) {
       onClick={onClose}
       data-testid="poster-modal"
     >
-      <div className="relative max-w-4xl w-full mx-4 animate-modal-slide-in" onClick={(e) => e.stopPropagation()}>
+      <div className="relative w-full h-full max-w-none mx-4 animate-modal-slide-in flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
           className="absolute -top-12 right-0 text-white hover:text-red-400 text-2xl transition-all duration-300 hover:scale-110 bg-black/50 rounded-full w-10 h-10 flex items-center justify-center"
@@ -23,7 +23,7 @@ export default function PosterModal({ movieData, onClose }: PosterModalProps) {
           <i className="fas fa-times"></i>
         </button>
         
-        <div className="bg-card rounded-lg overflow-hidden shadow-2xl">
+        <div className="bg-card rounded-lg overflow-hidden shadow-2xl max-w-4xl w-full">
           {/* Poster Image Display */}
           <div className="aspect-video bg-black flex items-center justify-center relative">
             <img 
