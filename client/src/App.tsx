@@ -33,14 +33,14 @@ function App() {
   const [showTrailerModal, setShowTrailerModal] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Cast data with better placeholder images
+  // Cast data with actor images
   const mainCast: CastMember[] = [
-    { name: 'Chris Pratt', character: 'Peter Quill / Star-Lord', imageId: 'https://i.pravatar.cc/300?u=chrispratt' },
-    { name: 'Zoe Saldaña', character: 'Gamora', imageId: 'https://i.pravatar.cc/300?u=zoesaldana' },
-    { name: 'Dave Bautista', character: 'Drax', imageId: 'https://i.pravatar.cc/300?u=davebautista' },
-    { name: 'Bradley Cooper', character: 'Rocket (voice)', imageId: 'https://i.pravatar.cc/300?u=bradleycooper' },
-    { name: 'Vin Diesel', character: 'Groot (voice)', imageId: 'https://i.pravatar.cc/300?u=vindiesel' },
-    { name: 'Michael Rooker', character: 'Yondu', imageId: 'https://i.pravatar.cc/300?u=michaelrooker' }
+    { name: 'Chris Pratt', character: 'Peter Quill / Star-Lord', imageId: 'https://thaka.bing.com/th/id/OSK.1bb66e059efc4b1f8ee514585581c561?w=120&h=168&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' },
+    { name: 'Zoe Saldaña', character: 'Gamora', imageId: 'https://thaka.bing.com/th/id/OSK.2Ka_v2Bs8zJtYIZCbbHDChEkCywlHGED3TrRtUb2Zj4?w=120&h=120&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' },
+    { name: 'Dave Bautista', character: 'Drax', imageId: 'https://thaka.bing.com/th/id/OSK.636e0203656f7ab0aaa0efb9ec6f4c74?w=120&h=168&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' },
+    { name: 'Bradley Cooper', character: 'Rocket (voice)', imageId: 'https://thaka.bing.com/th/id/OSK.aSU9A4AVb9jyt7QlZWF4Hks6sQJ0eCJvXnpSF6cMgRA?w=120&h=168&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' },
+    { name: 'Vin Diesel', character: 'Groot (voice)', imageId: 'https://thaka.bing.com/th/id/OSK.4ef3ffd87dc439534437e90f67cf5c29?w=120&h=168&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' },
+    { name: 'Michael Rooker', character: 'Yondu', imageId: 'https://thaka.bing.com/th/id/OSK.SQCn-qRRQBMSwHpH0Y5Rea7LMmfnjvW-QgjV791xNCI?w=120&h=168&c=7&rs=1&qlt=80&o=6&cb=thwsc4&dpr=1.3&pid=SANGAM' }
   ];
 
   const fetchMovieData = async () => {
