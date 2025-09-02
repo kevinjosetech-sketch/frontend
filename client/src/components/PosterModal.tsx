@@ -8,21 +8,10 @@ interface PosterModalProps {
 }
 
 export default function PosterModal({ movieData, onClose }: PosterModalProps) {
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
-  const taggedPeople = [
-    { name: 'Zoe Saldaña', verified: true },
-    { name: 'Chris Pratt', verified: true }
-  ];
-
   return (
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 animate-fade-in"
-      onClick={handleBackdropClick}
+      onClick={onClose}
       data-testid="poster-modal"
     >
       <div className="relative max-w-4xl w-full mx-4 animate-modal-slide-in" onClick={(e) => e.stopPropagation()}>
