@@ -101,8 +101,9 @@ function App() {
     fetchMovieData();
     addScrollAnimations();
     
-    // Add smooth scrolling to document
+    // Add smooth scrolling to document and mark JS as loaded
     document.documentElement.classList.add('smooth-scroll');
+    document.body.classList.add('js-loaded');
   }, []);
 
   return (
