@@ -33,14 +33,14 @@ function App() {
   const [showTrailerModal, setShowTrailerModal] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Mock cast data based on real actors from the movie
+  // Cast data with better placeholder images
   const mainCast: CastMember[] = [
-    { name: 'Chris Pratt', character: 'Peter Quill / Star-Lord', imageId: '1506794778648' },
-    { name: 'Zoe Saldaña', character: 'Gamora', imageId: '1494790108755' },
-    { name: 'Dave Bautista', character: 'Drax', imageId: '1507003211169' },
-    { name: 'Bradley Cooper', character: 'Rocket (voice)', imageId: '1472099645262' },
-    { name: 'Vin Diesel', character: 'Groot (voice)', imageId: '1500648767336' },
-    { name: 'Michael Rooker', character: 'Yondu', imageId: '1519244703547' }
+    { name: 'Chris Pratt', character: 'Peter Quill / Star-Lord', imageId: 'https://i.pravatar.cc/300?u=chrispratt' },
+    { name: 'Zoe Saldaña', character: 'Gamora', imageId: 'https://i.pravatar.cc/300?u=zoesaldana' },
+    { name: 'Dave Bautista', character: 'Drax', imageId: 'https://i.pravatar.cc/300?u=davebautista' },
+    { name: 'Bradley Cooper', character: 'Rocket (voice)', imageId: 'https://i.pravatar.cc/300?u=bradleycooper' },
+    { name: 'Vin Diesel', character: 'Groot (voice)', imageId: 'https://i.pravatar.cc/300?u=vindiesel' },
+    { name: 'Michael Rooker', character: 'Yondu', imageId: 'https://i.pravatar.cc/300?u=michaelrooker' }
   ];
 
   const fetchMovieData = async () => {

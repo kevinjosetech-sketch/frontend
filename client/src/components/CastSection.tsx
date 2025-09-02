@@ -27,7 +27,7 @@ export default function CastSection({ cast }: CastSectionProps) {
               data-testid={`cast-card-${index}`}>
               <div className="aspect-[3/4] bg-muted">
                 <img 
-                  src={`https://images.unsplash.com/photo-${actor.imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400`} 
+                  src={actor.imageId} 
                   alt={actor.name}
                   className="w-full h-full object-cover"
                   data-testid={`cast-image-${index}`}
