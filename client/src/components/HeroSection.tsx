@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CircularProgress from './CircularProgress';
 import InteractiveRating from './InteractiveRating';
+import highResPosterUrl from '@assets/image_1756799589144.png';
 
 interface MovieData {
   Title: string;
@@ -64,11 +65,11 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           {/* Movie Poster */}
           <div className="lg:col-span-1 fade-in">
-            <div className="relative cursor-pointer group" onClick={() => setShowPosterModal(true)}>
+            <div className="relative cursor-pointer group max-w-sm mx-auto lg:mx-0" onClick={() => setShowPosterModal(true)}>
               <img 
                 src={movieData.Poster} 
                 alt={movieData.Title + ' poster'}
-                className="w-full max-w-sm mx-auto lg:mx-0 rounded-lg shadow-2xl transition-transform duration-300 group-hover:scale-105"
+                className="w-full rounded-lg shadow-2xl transition-transform duration-300 group-hover:scale-105"
                 data-testid="movie-poster"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
@@ -208,8 +209,8 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
         >
           <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center animate-zoom-in" onClick={(e) => e.stopPropagation()}>
             <img 
-              src={movieData.Poster}
-              alt={movieData.Title + ' poster'}
+              src={highResPosterUrl}
+              alt={movieData.Title + ' high resolution poster'}
               className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
             />
             <button 

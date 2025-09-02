@@ -4,6 +4,7 @@ import SubNavigation from "./components/SubNavigation";
 import HeroSection from "./components/HeroSection";
 import CastSection from "./components/CastSection";
 import TrailerModal from "./components/TrailerModal";
+import JioHotstarSection from "./components/JioHotstarSection";
 
 interface MovieData {
   Title: string;
@@ -127,10 +128,13 @@ function App() {
           />
           
           {activeTab === 'overview' && (
-            <CastSection 
-              cast={mainCast}
-              data-testid="cast-section"
-            />
+            <>
+              <CastSection 
+                cast={mainCast}
+                data-testid="cast-section"
+              />
+              <JioHotstarSection movieTitle={movieData.Title} />
+            </>
           )}
           
           {activeTab === 'media' && (
