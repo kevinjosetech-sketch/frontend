@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import CircularProgress from './CircularProgress';
 import InteractiveRating from './InteractiveRating';
-import highResPosterUrl from '@assets/image_1756799589144.png';
+import PosterModal from './PosterModal';
 
 interface MovieData {
   Title: string;
@@ -202,30 +202,10 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
       
       {/* Poster Modal */}
       {showPosterModal && (
-        <div 
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4 animate-fade-in"
-          onClick={() => setShowPosterModal(false)}
-          data-testid="poster-modal"
-        >
-          <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center animate-zoom-in" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={highResPosterUrl}
-              alt={movieData.Title + ' high resolution poster'}
-              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-            />
-            <button 
-              onClick={() => setShowPosterModal(false)}
-              className="absolute top-4 right-4 text-white bg-black/70 hover:bg-red-600 rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 hover:scale-110"
-              data-testid="close-poster-modal"
-            >
-              <i className="fas fa-times text-xl"></i>
-            </button>
-            <div className="absolute bottom-4 left-4 text-white bg-black/70 rounded-lg p-4 backdrop-blur-sm">
-              <h3 className="font-bold text-lg">{movieData.Title}</h3>
-              <p className="text-sm text-gray-300">Click outside to close • ESC to exit</p>
-            </div>
-          </div>
-        </div>
+        <PosterModal 
+          movieData={movieData}
+          onClose={() => setShowPosterModal(false)}
+        />
       )}
     </section>
   );
