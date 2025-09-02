@@ -5,7 +5,12 @@ export default function NavigationHeader() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-primary-foreground" data-testid="logo">TMDB</h1>
+              <img 
+                src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" 
+                alt="TMDB" 
+                className="h-8 w-auto" 
+                data-testid="logo"
+              />
             </div>
             <div className="hidden md:flex space-x-6">
               <a href="#" className="text-primary-foreground hover:text-gray-200 font-medium transition-colors" data-testid="nav-movies">Movies</a>

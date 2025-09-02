@@ -77,15 +77,6 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
                   <p className="text-sm font-medium">View Full Size</p>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 hidden lg:block">
-                <button 
-                  onClick={onShowTrailer} 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105"
-                  data-testid="button-play-trailer-desktop">
-                  <i className="fas fa-play mr-2"></i>
-                  Play Trailer
-                </button>
-              </div>
             </div>
           </div>
 
@@ -157,13 +148,13 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
                   </button>
                 </div>
 
-                {/* Play Trailer Button (Mobile) */}
+                {/* Play Trailer Button */}
                 <button 
                   onClick={onShowTrailer} 
-                  className="lg:hidden bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-semibold shadow-lg transition-all duration-300"
-                  data-testid="button-play-trailer-mobile">
-                  <i className="fas fa-play mr-2"></i>
-                  Play Trailer
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-lg font-semibold shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2"
+                  data-testid="button-play-trailer">
+                  <i className="fas fa-play"></i>
+                  <span>Play Trailer</span>
                 </button>
 
                 {/* Interactive Rating Component */}
@@ -211,11 +202,11 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
       {/* Poster Modal */}
       {showPosterModal && (
         <div 
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4 animate-fade-in"
           onClick={() => setShowPosterModal(false)}
           data-testid="poster-modal"
         >
-          <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center animate-zoom-in" onClick={(e) => e.stopPropagation()}>
             <img 
               src={movieData.Poster}
               alt={movieData.Title + ' poster'}
@@ -223,14 +214,14 @@ export default function HeroSection({ movieData, onShowTrailer }: HeroSectionPro
             />
             <button 
               onClick={() => setShowPosterModal(false)}
-              className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+              className="absolute top-4 right-4 text-white bg-black/70 hover:bg-red-600 rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300 hover:scale-110"
               data-testid="close-poster-modal"
             >
-              <i className="fas fa-times text-lg"></i>
+              <i className="fas fa-times text-xl"></i>
             </button>
-            <div className="absolute bottom-4 left-4 text-white bg-black/50 rounded-lg p-3">
+            <div className="absolute bottom-4 left-4 text-white bg-black/70 rounded-lg p-4 backdrop-blur-sm">
               <h3 className="font-bold text-lg">{movieData.Title}</h3>
-              <p className="text-sm text-gray-300">Click outside to close</p>
+              <p className="text-sm text-gray-300">Click outside to close • ESC to exit</p>
             </div>
           </div>
         </div>
