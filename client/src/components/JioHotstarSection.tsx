@@ -54,9 +54,9 @@ export default function JioHotstarSection({ movieTitle }: JioHotstarSectionProps
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="mb-6">
                 <img 
-                  src="https://logos-world.net/wp-content/uploads/2023/01/JioCinema-Logo.png" 
+                  src="https://imageio.forbes.com/specials-images/imageserve/67af741d53bfa3e9267a1205/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds" 
                   alt="JioHotstar"
-                  className="h-12 mx-auto lg:mx-0 mb-4"
+                  className="h-12 mx-auto lg:mx-0 mb-4 object-contain"
                 />
                 <h3 className="text-2xl font-bold text-white mb-2">Start Watching Now</h3>
                 <p className="text-gray-200">Join millions of viewers streaming the best content</p>
