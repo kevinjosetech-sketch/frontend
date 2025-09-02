@@ -1,9 +1,8 @@
-import highResPosterUrl from '@assets/image_1756799589144.png';
-
 interface PosterModalProps {
   movieData: {
     Title: string;
     Year: string;
+    Poster: string;
   };
   onClose: () => void;
 }
@@ -31,8 +30,8 @@ export default function PosterModal({ movieData, onClose }: PosterModalProps) {
         <div className="flex-shrink-0 w-1/2 bg-gradient-to-br from-purple-600 via-blue-600 to-orange-500 p-1">
           <div className="w-full h-full bg-black rounded-lg overflow-hidden">
             <img 
-              src={highResPosterUrl}
-              alt={`${movieData.Title} high resolution poster`}
+              src={movieData.Poster}
+              alt={`${movieData.Title} poster`}
               className="w-full h-full object-contain"
             />
           </div>
