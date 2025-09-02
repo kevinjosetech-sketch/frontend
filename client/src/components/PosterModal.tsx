@@ -1,5 +1,3 @@
-import highResPosterUrl from '@assets/image_1756800156051.png';
-
 interface PosterModalProps {
   movieData: {
     Title: string;
@@ -40,8 +38,8 @@ export default function PosterModal({ movieData, onClose }: PosterModalProps) {
           {/* Poster Image Display */}
           <div className="aspect-video bg-black flex items-center justify-center relative">
             <img 
-              src={highResPosterUrl}
-              alt={`${movieData.Title} high resolution poster`}
+              src={movieData.Poster}
+              alt={`${movieData.Title} poster`}
               className="max-w-full max-h-full object-contain"
             />
           </div>
